@@ -26,3 +26,7 @@ def standardize_numerical(df, numerical_cols):
     return df
 
 
+########### Remove rows without Target ###########
+def remove_rows_without_target(df, target_col):
+    df = df.dropna(subset=[target_col])
+    return df
