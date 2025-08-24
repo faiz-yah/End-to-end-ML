@@ -1,6 +1,7 @@
 from sklearn.preprocessing import FunctionTransformer
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+import pandas as pd
 
 ########### Imputation of Missing Values ###########
 ## Nummerical Features
@@ -29,4 +30,21 @@ def standardize_numerical(df, numerical_cols):
 ########### Remove rows without Target ###########
 def remove_rows_without_target(df, target_col):
     df = df.dropna(subset=[target_col])
+    return df
+
+########### One hot encoding - Categorical  ###########
+def encode_categorical(df, encode_categorical_cols):
+    df = pd.get_dummies(df, columns=encode_categorical_cols, drop_first=True)
+    return df
+
+
+########### Target Mapping ###########
+def map_target(df, target_col, map_dict):
+    df[target_col] = df[target_col].map(map_dict)
+    return df
+
+
+########### Drop Columns ###########
+def drop_columns(df, target_col, map_dict):
+    df[target_col] = df[target_col].map(map_dict)
     return df
