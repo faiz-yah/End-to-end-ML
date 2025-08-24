@@ -1,5 +1,9 @@
 {
-  "categorical_cols": ["HomePlanet", "CryoSleep", "Cabin", "Destination", "VIP"],
+  "categorical_cols": ["HomePlanet", "CryoSleep", "Destination", "VIP"],
   "numerical_cols": ["Age", "RoomService", "FoodCourt", "ShoppingMall", "Spa", "VRDeck"],
-  "target_col": "Transported"
+  "encode_categorical_cols" : ["HomePlanet", "Destination"],
+  "target_col": "Transported",
+  "map_dict": {"true": 1, "false": 0},
+  "test_size": 0.2,
+  "random_state": 42
 }

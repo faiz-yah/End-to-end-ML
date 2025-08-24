@@ -1,0 +1,18 @@
+program: wandb_sweep_correct.py
+method: bayes
+metric:
+  name: classifier_metric
+  goal: maximize
+parameters:
+  n_estimators:
+    min: 10
+    max: 50
+  max_depth:
+    min: 1
+    max: 10
+  min_samples_split:
+    min: 2
+    max: 10
+  min_samples_leaf:
+    min: 1
+    max: 10
