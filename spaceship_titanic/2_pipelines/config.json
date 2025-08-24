@@ -1,0 +1,5 @@
+{
+  "categorical_cols": ["HomePlanet", "CryoSleep", "Cabin", "Destination", "VIP"],
+  "numerical_cols": ["Age", "RoomService", "FoodCourt", "ShoppingMall", "Spa", "VRDeck"],
+  "target_col": "Transported"
+}
